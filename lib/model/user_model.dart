@@ -8,7 +8,7 @@ class UserModel {
   final String? birth;
   final String? gender;
   final String? phone;
-  final String? id;
+ 
 
   UserModel(
       {
@@ -18,7 +18,7 @@ class UserModel {
       required this.birth,
       required this.gender,
       required this.phone,
-      this.id
+    
       });
 
   factory UserModel.fromJson(Map<String, dynamic>? data) {
@@ -29,7 +29,7 @@ class UserModel {
         birth: data?["birth"],
         gender: data?["gender"],
         phone: data?["phone"],
-        id: data?['id'],
+        
        );
   }
 
@@ -41,7 +41,7 @@ class UserModel {
       "birth": birth,
       "gender": gender,
       "phone": phone,
-      'id': id
+      
      
     };
   }

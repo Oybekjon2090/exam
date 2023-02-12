@@ -10,73 +10,49 @@ class UploadingPhoto extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 23),
-          decoration: BoxDecoration(
-              boxShadow: [
-                const BoxShadow(
-                    blurRadius: 1, offset: Offset(-0, 1), color: Colors.grey)
-              ],
-              borderRadius: const BorderRadius.all(Radius.circular(20)),
-              color: Colors.white,
-              border: Border.all(color: const Color(0xffEBEEF2))),
-          child: Column(
-            children: [
-              InkWell(
-                onTap: () {
-                  context.read<AuthController>().getImageCamera();
-                },
-                child: Container(
-                  height: 80.h,
-                  width: 80.w,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Style.primaryDisabledColor),
-                  child: const Icon(
-                    Icons.photo_camera,
-                    color: Style.blackColor,
-                  ),
+        InkWell(
+          onTap: () {
+            context.read<AuthController>().getImageCamera();
+          },
+          child: Container(
+            padding: EdgeInsets.all(18),
+            decoration:  BoxDecoration(
+                borderRadius: BorderRadius.circular(24),
+                color: Style.primaryDisabledColor),
+            child: Row(
+              children: [
+                const Icon(
+                  Icons.photo_camera,
+                  color: Style.whiteColor,
                 ),
-              ),
-              10.verticalSpace,
-              Text('Take photo', style: Style.textStyleRegular2()),
-            ],
+                Text('Take photo', style: Style.textStyleRegular2(textColor: Style.whiteColor)),
+              ],
+            ),
           ),
         ),
+        10.verticalSpace,
         24.verticalSpace,
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 150, vertical: 23),
-          decoration: BoxDecoration(
-              boxShadow: [
-                const BoxShadow(
-                    blurRadius: 1, offset: Offset(-0, 1), color: Colors.grey)
-              ],
-              borderRadius: const BorderRadius.all(Radius.circular(20)),
-              color: Colors.white,
-              border: Border.all(color: const Color(0xffEBEEF2))),
-          child: Column(
-            children: [
-              InkWell(
-                onTap: () {
-                  context.read<AuthController>().getImageGallery();
-                },
-                child: Container(
-                  height: 80.h,
-                  width: 80.w,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Style.primaryDisabledColor),
-                  child: const Icon(
-                    Icons.photo,
-                    color: Style.blackColor,
-                  ),
+        InkWell(
+          onTap: () {
+            context.read<AuthController>().getImageGallery();
+          },
+          child: Container(
+            padding: EdgeInsets.all(18),
+            decoration:  BoxDecoration(
+               borderRadius: BorderRadius.circular(24),
+                color: Style.primaryDisabledColor),
+            child:  Row(
+              children: [
+                Icon(
+                  Icons.photo,
+                  color: Style.whiteColor,
                 ),
-              ),
-              10.verticalSpace,
-              Text('From gallery', style: Style.textStyleRegular2()),
-            ],
+                Text('From gallery', style: Style.textStyleRegular2(textColor: Style.whiteColor)),
+              ],
+            ),
           ),
         ),
       ],

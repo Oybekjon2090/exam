@@ -18,8 +18,8 @@ class NextButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 130),
       decoration: BoxDecoration(
         color: image.isEmpty
-            ? const Color.fromARGB(244, 235, 134, 164)
-            : const Color(0xffFF1843),
+            ? Style.primaryColor
+            : Style.primaryDisabledColor,
         borderRadius: const BorderRadius.all(Radius.circular(32)),
       ),
       child: Center(

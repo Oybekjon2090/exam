@@ -11,7 +11,8 @@ import 'package:provider/provider.dart';
 
 
 import '../../../controller/auth_controller.dart';
-import '../../components/custom_textform.dart';
+import '../../components/custom_text_form_fild.dart';
+
 import '../../components/gender_choose.dart';
 import '../../components/label_textformfield.dart';
 import '../../components/warning_container.dart';
@@ -60,17 +61,9 @@ class _FillBioPageState extends State<FillBioPage> {
                       onTap: () {
                         Navigator.pop(context);
                       },
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 8.18, vertical: 8.18),
-                        decoration: const BoxDecoration(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(9.82)),
-                            color: Color.fromARGB(255, 234, 175, 194)),
-                        child: const Icon(
-                          Icons.arrow_back_ios,
-                          color: Color(0xffF43F5E),
-                        ),
+                      child: const Icon(
+                        Icons.arrow_back_ios,
+                        color: Style.primaryDisabledColor,
                       ),
                     ),
                     Padding(

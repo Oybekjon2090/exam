@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:google_fonts/google_fonts.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:provider/provider.dart';
 import '../../../controller/auth_controller.dart';
 import '../../components/auth_button.dart';
 import '../../components/ckeck_box.dart';
-import '../../components/custom_textform.dart';
+import '../../components/custom_text_form_fild.dart';
 
 import '../../components/warning_container.dart';
 import '../../style/style.dart';
@@ -125,7 +124,7 @@ class _SignInPageState extends State<SignInPage> {
                       text: 'Please fill the Password',
                     ))
                 : const SizedBox.shrink(),
-            22.verticalSpace,
+           
             const Padding(
                 padding: EdgeInsets.only(
                   left: 48,
@@ -140,7 +139,7 @@ class _SignInPageState extends State<SignInPage> {
                       style: Style.textStyleRegular2(textColor: Colors.red),
                     ),
                   ),
-            24.verticalSpace,
+            
             Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 24,
@@ -174,13 +173,9 @@ class _SignInPageState extends State<SignInPage> {
             20.verticalSpace,
             Text('Forgot the password?',
                 style: Style.textStyleRegular2(textColor: Style.primaryColor)),
-            32.verticalSpace,
-            Text('or continue with',
-                style: Style.textStyleRegular2(textColor: Style.blackColor)),
-            24.verticalSpace,
-            
-            32.verticalSpace,
+
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+              
               Text(
                 'Don’t have an account?',
                 style: GoogleFonts.sourceSansPro(

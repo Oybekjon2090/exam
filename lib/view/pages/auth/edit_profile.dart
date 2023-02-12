@@ -9,7 +9,7 @@ import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import '../../../controller/auth_controller.dart';
-import '../../components/custom_textform.dart';
+import '../../components/custom_text_form_fild.dart';
 import '../../components/gender_choose.dart';
 import '../../components/label_textformfield.dart';
 import '../../components/warning_container.dart';

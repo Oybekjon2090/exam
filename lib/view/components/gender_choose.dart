@@ -20,7 +20,7 @@ class _GenderChoosingState extends State<GenderChoosing> {
     return Padding(
       padding: const EdgeInsets.only(top: 8, left: 24, right: 24),
       child: DropdownButtonFormField(
-        icon: Icon(Icons.calendar_month),
+        icon: Icon(Icons.arrow_drop_down),
         value: initialvalue,
         decoration: InputDecoration(
           contentPadding:

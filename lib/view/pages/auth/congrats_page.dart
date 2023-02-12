@@ -20,27 +20,7 @@ class CongratsPage extends StatelessWidget {
                     
                       image: AssetImage('assets/image/Group.png'),
                       )),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(
-                    'assets/image/done.png',
-                    height: 173.h,
-                    width: 177.75.w,
-                  ),
-                  24.verticalSpace,
-                  Text(
-                    'Congrats!',
-                    style: Style.textStyleRegular(
-                        size: 32, textColor: Style.primaryColor),
-                  ),
-                  24.verticalSpace,
-                  Text(
-                    'Your profile is ready to use!',
-                    style: Style.textStyleRegular(),
-                  ),
-                ],
-              ),
+              
             ),
           ),
           Padding(

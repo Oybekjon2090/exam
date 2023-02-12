@@ -6,7 +6,7 @@ class Style {
 
   // ---------- Color   ---------- //
 
-  static const primaryColor = Color(0xff6499FF);
+  static const primaryColor = Color.fromARGB(255, 134, 173, 245);
   static const whiteColor = Colors.white;
   static const blackColor = Colors.black;
   static const redColor = Colors.red;

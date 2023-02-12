@@ -15,29 +15,26 @@ class AuthButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: AnimatedContainer(
-        width: double.infinity,
-        height: 55.h,
-        duration: const Duration(milliseconds: 400),
-       
-        decoration: BoxDecoration(
-          color: controller.text.isEmpty
-              ? Style.primaryColor
-              :  Style.primaryDisabledColor,
-          borderRadius: const BorderRadius.all(Radius.circular(32)),
-        ),
-        child: Center(
-          child: context.watch<AuthController>().isLoading
-              ? Padding(
-                  padding: const EdgeInsets.all(2.0),
-                  child: LoadingAnimationWidget.inkDrop(
-                      color: Style.whiteColor, size: 35),
-                )
-              : Text(text,
-                  style: Style.textStyleRegular(textColor: Style.whiteColor)),
-        ),
+    return AnimatedContainer(
+      width: double.infinity,
+      height: 55.h,
+      duration: const Duration(milliseconds: 400),
+     
+      decoration: BoxDecoration(
+        color: controller.text.isEmpty
+            ? Style.primaryColor
+            :  Style.primaryDisabledColor,
+        borderRadius: const BorderRadius.all(Radius.circular(32)),
+      ),
+      child: Center(
+        child: context.watch<AuthController>().isLoading
+            ? Padding(
+                padding: const EdgeInsets.all(2.0),
+                child: LoadingAnimationWidget.inkDrop(
+                    color: Style.whiteColor, size: 35),
+              )
+            : Text(text,
+                style: Style.textStyleRegular(textColor: Style.whiteColor)),
       ),
     );
   }

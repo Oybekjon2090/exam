@@ -25,7 +25,7 @@ class _CkeckBoxState extends State<CkeckBox> {
                       side: MaterialStateBorderSide.resolveWith(
                         (states) => const BorderSide(
                           width: 1.0,
-                          color: Style.primaryDisabledColor,
+                          color: Style.primaryColor,
                         ),
                       ),
                       activeColor: Style.primaryDisabledColor,

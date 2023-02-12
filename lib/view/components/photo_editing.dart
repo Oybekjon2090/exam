@@ -1,3 +1,4 @@
+import 'package:exam/view/style/style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -54,7 +55,7 @@ class _PhotoEditingState extends State<PhotoEditing> {
             height: 55.h,
             width: 55.w,
             decoration: BoxDecoration(
-              color: Color(0xffF43F5E),
+              color: Style.primaryDisabledColor,
               shape: BoxShape.circle,
             ),
             padding: EdgeInsets.all(8.r),

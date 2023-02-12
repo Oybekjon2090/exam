@@ -98,11 +98,11 @@ class GeneralPage extends StatefulWidget {
 
 class _GeneralPageState extends State<GeneralPage> {
   List<Widget> mainPages = [
+    const Placeholder(),
+    const Placeholder(),
+    const Placeholder(),
+    const Placeholder(),
     const HomePage(),
-    const Placeholder(),
-    const Placeholder(),
-    const Placeholder(),
-    const Placeholder(),
   ];
 
   @override
@@ -127,21 +127,14 @@ class _GeneralPageState extends State<GeneralPage> {
                 ),
                 label: ''),
             const BottomNavigationBarItem(icon: Icon(Icons.search), label: ''),
-            const BottomNavigationBarItem(
+            
+            BottomNavigationBarItem(
+                icon: Icon(Icons.favorite), label: ''),
+                const BottomNavigationBarItem(
                 icon: Icon(Icons.add_box_outlined), label: ''),
             BottomNavigationBarItem(
-                icon: SvgPicture.asset('assets/svg/Icons.svg'), label: ''),
-            BottomNavigationBarItem(
                 label: '',
-                icon: Container(
-                  height: 25.h,
-                  width: 25.w,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/me.jpeg'),
-                          fit: BoxFit.cover)),
-                )),
+                icon: Icon(Icons.person)),
           ]),
     );
   }

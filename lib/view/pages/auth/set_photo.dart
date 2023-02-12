@@ -26,16 +26,9 @@ class _UploadPhotoPageState extends State<UploadPhotoPage> {
           Row(
             children: [
               24.horizontalSpace,
-              Container(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: 8.18, vertical: 8.18),
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(9.82)),
-                    color: Color.fromARGB(255, 234, 175, 194)),
-                child: const Icon(
-                  Icons.arrow_back_ios,
-                  color: Color(0xffF43F5E),
-                ),
+              const Icon(
+                Icons.arrow_back_ios,
+                color: Style.primaryDisabledColor,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 24),

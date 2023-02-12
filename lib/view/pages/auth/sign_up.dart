@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import '../../../controller/auth_controller.dart';
 import '../../components/auth_button.dart';
 import '../../components/ckeck_box.dart';
-import '../../components/custom_textform.dart';
+import '../../components/custom_text_form_fild.dart';
 
 import '../../components/warning_container.dart';
 import '../../style/style.dart';
@@ -79,7 +79,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 hintext: 'Phone Number',
               ),
             ),
-            8.verticalSpace,
+            
             isPhoneEmpty
                 ? const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 24),
@@ -104,7 +104,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     ),
                   ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 24,),
               child: InkWell(
                 onTap: () {
                   if (phone.text.isEmpty) {
@@ -126,13 +126,6 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
             ),
-            20.verticalSpace,
-            Text('Forgot the password?',
-                style: Style.textStyleRegular2(textColor: Style.primaryColor)),
-            32.verticalSpace,
-            Text('or continue with',
-                style: Style.textStyleRegular2(textColor: Style.blackColor)),
-            24.verticalSpace,
             
             32.verticalSpace,
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
