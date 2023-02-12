@@ -1,20 +1,21 @@
 {
   "project_info": {
     "project_number": "1078177656201",
+    "firebase_url": "https://exam-c9662-default-rtdb.firebaseio.com",
     "project_id": "exam-c9662",
     "storage_bucket": "exam-c9662.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1078177656201:android:35b99fe3bb94e951064558",
+        "mobilesdk_app_id": "1:1078177656201:android:e2669ed4db48a8d3064558",
         "android_client_info": {
           "package_name": "com.example.exam"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1078177656201-a5gan2iv3q0sjut4b0khmrqjg6sj9mkc.apps.googleusercontent.com",
+          "client_id": "1078177656201-b3ut55bea2fcg2mi5mkmr9kb3c23gjg5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.exam",
