@@ -1,6 +1,4 @@
-import 'package:exam/login_page.dart';
-import 'package:exam/pages/home_scren.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:exam/view/pages/auth/sign_in.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,7 +9,6 @@ import 'controller/auth_controller.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
   await Firebase.initializeApp();
 
   runApp(const MyApp());
@@ -45,17 +42,5 @@ class MyApp extends StatelessWidget {
             );
           }),
     );
-  }
-}
-
-class AuthWraper extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final user = context.watch<User?>();
-
-    if (user != null) {
-      return HomeScren();
-    }
-    return LoginPage();
   }
 }
