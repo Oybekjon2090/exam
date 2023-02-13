@@ -23,36 +23,38 @@ class _ProfilePageState extends State<ProfilePage> {
       padding: const EdgeInsets.all(24),
       child: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                width: 52.w,
-                height: 52.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(100),
-                    color: Style.primaryColor.withOpacity(0.1)),
-                child: Center(
-                    child: Icon(
-                  Icons.person,
-                  color: Style.primaryColor,
-                )),
-              ),
-              16.horizontalSpace,
-              Text(
-                "Edit Profile",
-                style: TextStyle(fontSize: 16),
-              ),
-              Spacer(),
-              IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (_) => EditeProfile()));
-                  },
-                  icon: Icon(
-                    Icons.chevron_right,
+          InkWell(
+            onTap: (){
+               Navigator.of(context).push(
+                          MaterialPageRoute(builder: (_) => EditeProfile()));
+            },
+            child: Row(
+              children: [
+                Container(
+                  width: 52.w,
+                  height: 52.h,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(100),
+                      color: Style.primaryColor.withOpacity(0.1)),
+                  child: Center(
+                      child: Icon(
+                    Icons.person,
                     color: Style.primaryColor,
-                  ))
-            ],
+                  )),
+                ),
+                16.horizontalSpace,
+                Text(
+                  "Edit Profile",
+                  style: TextStyle(fontSize: 16),
+                ),
+               
+                Spacer(),
+                 Icon(
+                      Icons.chevron_right,
+                      color: Style.primaryColor,
+                    ),
+              ],
+            ),
           ),
           SizedBox(
               child: Divider(

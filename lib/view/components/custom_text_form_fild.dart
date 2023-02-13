@@ -46,7 +46,7 @@ class CustomTextFrom extends StatelessWidget {
           isObscure ? (context.watch<AppController>().isVisibility) : false,
       decoration: InputDecoration(
           prefixIcon: prefixicon,
-          label: Text('$label'),
+          
           hintText: hintext,
           contentPadding:
               const EdgeInsets.only(left: 24, right: 80, top: 12, bottom: 12),

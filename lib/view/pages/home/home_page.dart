@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:exam/view/components/profile_edit.dart';
-import 'package:exam/view/pages/home/general_page.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import '../../../controller/auth_controller.dart';
 import '../../../controller/user_controller.dart';
 import '../../components/cached_network_image.dart';
 import '../../style/style.dart';
@@ -39,12 +42,18 @@ class _HomePageState extends State<HomePage> {
               Row(
                 children: [
                   24.horizontalSpace,
-                  CustomImageNetwork(
-                      radius: 100,
+                  Container(
+                      width: 100.w,
                       height: 80.h,
-                      width: 80.w,
-                      image:
-                          '${context.watch<UserController>().user?.avatar ?? ""}'),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                            image: FileImage(
+                              File(context.watch<AuthController>().imagePath),
+                            ),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
                   24.horizontalSpace,
                   Expanded(
                     child: Container(

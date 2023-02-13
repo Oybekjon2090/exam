@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../style/style.dart';
-import '../home/general_page.dart';
+import '../home/navigation_bar.dart';
 
 class CongratsPage extends StatelessWidget {
   const CongratsPage({super.key});

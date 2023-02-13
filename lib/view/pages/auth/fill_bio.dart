@@ -3,7 +3,7 @@ import 'package:exam/view/pages/auth/set_photo.dart';
 import 'package:exam/view/style/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
+
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -199,12 +199,7 @@ class _FillBioPageState extends State<FillBioPage> {
                           setState(() {});
                         });
                       }),
-                      icon: SvgPicture.asset(
-                        'assets/svg/calendar.svg',
-                        height: 24,
-                        width: 24,
-                        color: Colors.grey,
-                      ),
+                      icon: Icon(Icons.calendar_month)
                     ),
                     contentPadding: const EdgeInsets.only(
                         left: 24, right: 24, top: 12, bottom: 12),
@@ -273,10 +268,10 @@ class _FillBioPageState extends State<FillBioPage> {
                         phonenumber.text.isNotEmpty &&
                         passwor.text.isNotEmpty) {
                       context.read<AuthController>().setStateUser(
-                          name: fullname.text,
+                          fullname: fullname.text,
                           username: nickname.text,
                           password: passwor.text,
-                          email: email.text,
+                          
                           gender: context.read<AuthController>().gender,
                           birth: dateOfBirth.text,
                           onSuccess: () {
@@ -285,7 +280,7 @@ class _FillBioPageState extends State<FillBioPage> {
                                 MaterialPageRoute(
                                     builder: (_) => UploadPhotoPage()),
                                 (route) => false);
-                          });
+                          }, );
                     }
                   },
                   child: AnimatedContainer(

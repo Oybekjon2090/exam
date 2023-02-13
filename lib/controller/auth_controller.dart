@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -15,13 +16,12 @@ class AuthController extends ChangeNotifier {
   final ImagePicker _image = ImagePicker();
   UserModel? userModel;
   String verificationId = '';
+  String docId = '';
   String phone = "";
   String? errorText = '';
   String imagePath = "";
   bool isLoading = false;
   int currentIndex = 0;
-  bool isGoogleLoading = false;
-  bool isFacebookLoading = false;
   String gender = '';
 
   setIndex(int index) {
@@ -103,10 +103,9 @@ class AuthController extends ChangeNotifier {
   }
 
   setStateUser(
-      {required String name,
+      {required String fullname,
       required String username,
       required String password,
-      required String email,
       required String gender,
       required String birth,
       required VoidCallback onSuccess}) {
@@ -116,6 +115,7 @@ class AuthController extends ChangeNotifier {
       gender: gender,
       phone: phone,
       birth: birth,
+    
     );
     onSuccess();
   }
@@ -193,7 +193,8 @@ class AuthController extends ChangeNotifier {
                 gender: userModel?.gender ?? "",
                 phone: userModel?.phone ?? "",
                 birth: userModel?.birth ?? "",
-                avatar: url)
+                avatar: url,
+               )
             .toJson())
         .then((value) async {
       await LocalStore.setDocId(value.id);
@@ -201,4 +202,35 @@ class AuthController extends ChangeNotifier {
     });
   }
 
-}
+  updateUser({
+  
+    required String? username,
+    required String? password,
+    required String? gender,
+    required String? phon,
+    required String? birth, 
+    required String? avatar,
+    
+  }) async {
+
+   String? docId = await LocalStore.getDocId();
+    var res = await firestore.collection("user").doc(docId)
+        .update(UserModel(
+          avatar: imagePath,
+          username: username,
+          password: password,
+          gender: gender,
+          phone: phon,
+          birth: birth,
+        ).toJson() as Map<String, dynamic>)
+        .then((value) async {
+      await LocalStore.getDocId();
+        }
+        );
+      
+    }
+  }
+  
+
+  
+

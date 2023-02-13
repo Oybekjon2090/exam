@@ -10,7 +10,7 @@ import '../../components/custom_text_form_fild.dart';
 
 import '../../components/warning_container.dart';
 import '../../style/style.dart';
-import '../home/general_page.dart';
+import '../home/navigation_bar.dart';
 import 'sign_up.dart';
 
 class SignInPage extends StatefulWidget {
@@ -159,7 +159,7 @@ class _SignInPageState extends State<SignInPage> {
                         Navigator.pushAndRemoveUntil(
                             context,
                             MaterialPageRoute(
-                                builder: (_) => const GeneralPage()),
+                                builder: (_) =>  GeneralPage()),
                             (route) => false);
                       });
                     }

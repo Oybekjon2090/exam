@@ -47,9 +47,7 @@ dependencies:
   bottom_navy_bar: ^6.0.0
   google_fonts: ^4.0.1
   sms_autofill: ^2.2.0
-  flutter_svg: ^1.1.6
   flutter_screenutil: ^5.6.0
-  intl: ^0.17.0
   animated_icon_button: ^1.0.2
   progress_loading_button: ^1.1.4
   cached_network_image: ^3.2.3
@@ -65,6 +63,8 @@ dependencies:
   shimmer_animation: ^2.1.0+1
   animated_text_kit: ^4.2.2
   firebase_database: ^10.0.10
+ 
+  
 
 dev_dependencies:
   flutter_test:

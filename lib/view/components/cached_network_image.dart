@@ -37,7 +37,7 @@ class CustomImageNetwork extends StatelessWidget {
               ),
               child: Center(
                 child: LiquidCircularProgressIndicator(
-                  valueColor: AlwaysStoppedAnimation(Style.primaryColor),
+                  valueColor: const AlwaysStoppedAnimation(Style.primaryColor),
                   value: value.progress ?? 0,
                 ),
               ),
